@@ -1,0 +1,83 @@
+local css = loadstring(game:HttpGet("https://pastebin.com/raw/mxShqWyk"))()
+
+css:CreateWatermark("v1.0.0", "right")
+
+local Window = Library:CreateWindow("css", Vector2.new(350, 250), Enum.KeyCode.RightShift)
+
+local Tab1 = Window:CreateTab("Tab1")
+local Tab2 = Window:CreateTab("Tab2")
+
+local Example = Tab1:CreateSector("Example", "left")
+
+Example:AddToggle(
+    "Toggle!",
+    false,
+    function(first)
+       Enabled = first
+    end
+)
+
+Example:AddTextbox(
+    "Textbox",
+    100,
+    function(State)
+        Test = State
+    end
+)
+
+Example:AddButton(
+    "Button!",
+    function()
+        print("Button Pressed!")
+    end
+)
+
+Example:AddDropdown(
+    "Dropdown",
+    {"Option1", "Option2", "Option3", "Option4", "Option5"},
+    "Option1",
+    false,
+    function(Option)
+        Choice = "Option"
+    end
+)
+
+Example:AddSlider(
+    "Slider",
+    0,
+    50,
+    100,
+    1,
+    function(State)
+       
+    end
+)
+
+local ColorToggle = 
+Example:AddToggle(
+    "ColorPicker w/Toggle",
+    false,
+    function(e)
+
+    end
+)
+
+ColorToggle:AddColorpicker(
+    Color3.fromRGB(75, 0,130),
+    function(ztx)
+   
+    end
+)
+
+local ToggleBind = 
+Example:AddToggle(
+    "Keybind w/Toggle",
+    false,
+    function(e)
+
+    end
+)
+
+ToggleBind:AddKeybind()
+
+Tab2:CreateConfigSystem("left")
