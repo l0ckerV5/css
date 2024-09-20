@@ -1,6 +1,5 @@
 # css UI Library
 An Advanced UI Library
-——————————————————————————————
 v1.0.0
 
 # Loadstring:
@@ -91,6 +90,6 @@ Example:AddSlider(
     end
 )
 ```
-————————————————————————————————————
+
 # Thanks Message
 > Thanks for using css UI Library, its a honor to be the UI Designer of a future scripter. If you want to contact me, please send a friend request on discord, my username is l0ckerV5.. Happy Coding!
