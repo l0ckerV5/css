@@ -1,7 +1,5 @@
 local css = loadstring(game:HttpGet("https://pastebin.com/raw/mxShqWyk"))()
 
-css:CreateWatermark("v1.0.0", "right")
-
 local Window = Library:CreateWindow("css", Vector2.new(350, 250), Enum.KeyCode.RightShift)
 
 local Tab1 = Window:CreateTab("Tab1")
@@ -53,31 +51,5 @@ Example:AddSlider(
     end
 )
 
-local ColorToggle = 
-Example:AddToggle(
-    "ColorPicker w/Toggle",
-    false,
-    function(e)
-
-    end
-)
-
-ColorToggle:AddColorpicker(
-    Color3.fromRGB(75, 0,130),
-    function(ztx)
-   
-    end
-)
-
-local ToggleBind = 
-Example:AddToggle(
-    "Keybind w/Toggle",
-    false,
-    function(e)
-
-    end
-)
-
-ToggleBind:AddKeybind()
-
 Tab2:CreateConfigSystem("left")
+css:CreateWatermark("v1.0.0", "right")
