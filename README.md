@@ -1,6 +1,7 @@
 # css UI Library
 An Advanced UI Library
 v1.0.0
+
 - by l0ckerV5
 
 # Loadstring:
@@ -90,45 +91,6 @@ Section:AddSlider(
        
     end
 )
-```
-
-# Creating ColorToggle w/ ColorPicker
-
-```
-local ColorToggle = 
-Section:AddToggle(
-    "ColorPicker w/Toggle",
-    false,
-    function(e)
-
-    end
-)
-```
-
-```
-ColorToggle:AddColorpicker(
-    Color3.fromRGB(75, 0,130),
-    function(ztx)
-   
-    end
-)
-```
-
-# Creating ToggleBind
-
-```
-local ToggleBind = 
-Section:AddToggle(
-    "Keybind w/Toggle",
-    false,
-    function(e)
-
-    end
-)
-```
-
-```
-ToggleBind:AddKeybind()
 ```
 
 # Creating Config
