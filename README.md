@@ -1,36 +1,37 @@
 # css UI Library
 An Advanced UI Library
 v1.0.0
+- by l0ckerV5
 
 # Loadstring:
 > To implement the UI, you need this code inside a executor.
 ```
-local Library = loadstring(game:HttpGet("https://github.com/l0ckerV5/Krash/raw/main/Source"))()
+local Library = loadstring(game:HttpGet("https://github.com/l0ckerV5/css/raw/refs/heads/main/Source"))()
 ```
 
 # Creating the UI:
 > To create the ui, you use this code below the previous code, make sure theres spacing for organization.
 ```
-local Window = Library:CreateWindow("Krash UI Library", Vector2.new(300, 300), Enum.KeyCode.RightShift)
+local Window = Library:CreateWindow("css", Vector2.new(350, 250), Enum.KeyCode.RightShift)
 ```
-> you can customize the 'Krash UI Library' part to display whatever is to your liking.
+> you can customize the 'css' part to display whatever is to your liking.
 
 # Creating Tabs:
 
 ```
-local TestTab = Window:CreateTab("Test")
+local Tab = Window:CreateTab("Tab")
 ```
 
 # Creating Sections:
 
 ```
-local Example = TestTab:CreateSector("Example", "left")
+local Section = Tab:CreateSector("Section", "left")
 ```
 
 # Creating Buttons:
 
 ```
-Example:AddButton(
+Section:AddButton(
     "Button!",
     function()
         print("Button Pressed!")
@@ -41,7 +42,7 @@ Example:AddButton(
 # Creating Toggles:
 
 ```
-Example:AddToggle(
+Section:AddToggle(
     "Toggle!",
     false,
     function(first)
@@ -53,7 +54,7 @@ Example:AddToggle(
 # Creating Textboxes:
 
 ```
-Example:AddTextbox(
+Section:AddTextbox(
     "Textbox",
     100,
     function(State)
@@ -65,7 +66,7 @@ Example:AddTextbox(
 # Creating Dropdown:
 
 ```
-Example:AddDropdown(
+Section:AddDropdown(
     "Dropdown",
     {"Option1", "Option2", "Option3", "Option4", "Option5"},
     "Option1",
@@ -79,7 +80,7 @@ Example:AddDropdown(
 # Creating Slider:
 
 ```
-Example:AddSlider(
+Section:AddSlider(
     "Slider",
     0,
     50,
@@ -89,6 +90,57 @@ Example:AddSlider(
        
     end
 )
+```
+
+# Creating ColorToggle w/ ColorPicker
+
+```
+local ColorToggle = 
+Section:AddToggle(
+    "ColorPicker w/Toggle",
+    false,
+    function(e)
+
+    end
+)
+```
+
+```
+ColorToggle:AddColorpicker(
+    Color3.fromRGB(75, 0,130),
+    function(ztx)
+   
+    end
+)
+```
+
+# Creating ToggleBind
+
+```
+local ToggleBind = 
+Section:AddToggle(
+    "Keybind w/Toggle",
+    false,
+    function(e)
+
+    end
+)
+```
+
+```
+ToggleBind:AddKeybind()
+```
+
+# Creating Config
+
+```
+Tab:CreateConfigSystem("left")
+```
+
+# Creating Watermark
+
+```
+css:CreateWatermark("v1.0.0", "right")
 ```
 
 # Thanks Message
