@@ -7,15 +7,21 @@ v1.0.0
 # Loadstring:
 > To implement the UI, you need this code inside a executor.
 ```
-local Library = loadstring(game:HttpGet("https://github.com/l0ckerV5/css/raw/refs/heads/main/Source"))()
+local css = loadstring(game:HttpGet("https://rentry.org/css-source/raw"))()
 ```
 
 # Creating the UI:
 > To create the ui, you use this code below the previous code, make sure theres spacing for organization.
 ```
-local Window = Library:CreateWindow("css", Vector2.new(350, 250), Enum.KeyCode.RightShift)
+local Window = css:CreateWindow("css", Vector2.new(350, 250), Enum.KeyCode.RightShift)
 ```
 > you can customize the 'css' part to display whatever is to your liking.
+
+# Creating Watermark
+
+```
+css:CreateWatermark("v1.0.0", "right")
+```
 
 # Creating Tabs:
 
@@ -97,12 +103,6 @@ Section:AddSlider(
 
 ```
 Tab:CreateConfigSystem("left")
-```
-
-# Creating Watermark
-
-```
-css:CreateWatermark("v1.0.0", "right")
 ```
 
 # Thanks Message
