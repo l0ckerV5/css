@@ -1,6 +1,8 @@
-local css = loadstring(game:HttpGet("https://pastebin.com/raw/mxShqWyk"))()
+local css = loadstring(game:HttpGet("https://rentry.org/css-source/raw"))()
 
-local Window = Library:CreateWindow("css", Vector2.new(350, 250), Enum.KeyCode.RightShift)
+css:CreateWatermark("v1.0.0", "right")
+
+local Window = css:CreateWindow("css", Vector2.new(350, 250), Enum.KeyCode.RightShift)
 
 local Tab1 = Window:CreateTab("Tab1")
 local Tab2 = Window:CreateTab("Tab2")
@@ -52,4 +54,3 @@ Example:AddSlider(
 )
 
 Tab2:CreateConfigSystem("left")
-css:CreateWatermark("v1.0.0", "right")
